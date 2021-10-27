@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>signup</title>
+    <link rel="stylesheet" a href="css\font-awesome.min.css">
+	<link rel="stylesheet" href="stylesignuppage.css">
+</head>
+<body>
+	<div class="center">
+        <h1>CLINIKO</h1>
+    <div class="container">
+	<img src="logo.png"/>
+		<form method="post" action="signuppage.html">
+			<div class="form-input">
+				<input type="text" name="name"  placeholder="FULL NAME" value="" maxlength="50" required=""/>	
+				<span><?php if (isset($name_error)) echo $name_error; ?></span>
+			</div>
+			<div class="form-input">
+			<input type="text" name="email"value="" maxlength="30" required="" placeholder="email"/>
+			<span><?php if (isset($email_error)) echo $email_error; ?></span>
+			</div>
+			<div class="form-input">
+				<input type="password" name="password" placeholder="password" value="" maxlength="8" required=""/>
+				<span><?php if (isset($password_error)) echo $password_error; ?></span>
+			</div>
+			<div class="form-input">
+				<input type="password" name="cpassword" placeholder="password"value="" maxlength="8" required=""/>
+				<span><?php if (isset($cpassword_error)) echo $password_error; ?></span>
+			</div>
+            <div class="form-input">
+				<input type="text" name="mobile" placeholder="mobile" value="" maxlength="12" required=""/>
+				<span><?php if (isset($mobile_error)) echo $mobile_error; ?></span>
+			</div>
+			<button type="submit" class="btn" name="signup" value="submit">Register</button><br>
+			<a href=loginpage.html>Registered already?Click Here</a>
+		</form>
+	</div>
+</body>
+</html>
